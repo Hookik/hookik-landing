@@ -56,7 +56,7 @@ const Navbar = () => {
             onClick={() => {
               setShowMenu(!showMenu);
             }}
-            className="text-2xl lg:hidden"
+            className="text-2xl xl:hidden"
           >
             <HiOutlineMenuAlt2 />
           </button>

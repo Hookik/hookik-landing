@@ -28,7 +28,7 @@ const FeaturedPostSection = ({ featuredPosts, isLoading }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 15000); // 15 seconds
+    }, 15000); 
     return () => clearInterval(interval);
   }, [featuredPosts?.length]);
 

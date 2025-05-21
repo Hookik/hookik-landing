@@ -1,10 +1,28 @@
+"use client";
 import GradientBackground from "@/components/GradientBackground";
 import PageLayout from "@/template/PageLayout";
 import { FiSearch } from "react-icons/fi";
 import FeaturedPostSection from "./components/FeaturedPostSection";
 import LatestArticles from "./components/LatestArticles";
+import { useGetBlogsQuery } from "@/services/blog.api";
+import { useEffect } from "react";
 
 export default function blog() {
+  const {
+    data: blogPosts,
+    isLoading : blogPostIsLoading,
+    error,
+    refetch,
+  } = useGetBlogsQuery({
+    is_paginated: "no",
+    category: "",
+    search: "",
+    featured: "no",
+  });
+
+  useEffect(() => {
+    refetch();
+  }, []);
   return (
     <>
       <PageLayout footBanner={false}>
@@ -27,7 +45,7 @@ export default function blog() {
           </div>
         </GradientBackground>
         <FeaturedPostSection />
-        <LatestArticles />
+        <LatestArticles posts={blogPosts?.data} isLoading={blogPostIsLoading}/>
       </PageLayout>
     </>
   );

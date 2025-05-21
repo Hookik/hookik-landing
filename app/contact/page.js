@@ -83,7 +83,7 @@ const Contact = () => {
           </div>
 
           <div className="flex flex-col w-full lg:flex-row">
-            {/* Left Info */}
+
             <div className="w-full lg:w-[50%] py-10 rounded-l-xl bg-[#8937CE] px-4 text-white flex flex-col gap-y-10">
               <div className="flex flex-col gap-y-4">
                 <h2 className="text-2xl font-semibold">Get In Touch</h2>
@@ -105,7 +105,7 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Form */}
+
             <div className="w-full lg:w-[50%] py-10 rounded-r-xl shadow-xl px-4 bg-white flex flex-col gap-y-10">
               <h2 className="text-2xl font-semibold">Send A Message</h2>
 

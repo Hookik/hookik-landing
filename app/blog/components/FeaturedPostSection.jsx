@@ -28,11 +28,11 @@ const FeaturedPostSection = ({ featuredPosts, isLoading }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 15000);
+    }, 15000); // 15 seconds
     return () => clearInterval(interval);
-  }, [featuredPosts.length]);
+  }, [featuredPosts?.length]);
 
-  const post = featuredPosts[index];
+  const post = featuredPosts?.length > 0 && featuredPosts[index];
 
   return (
     <>
@@ -59,18 +59,18 @@ const FeaturedPostSection = ({ featuredPosts, isLoading }) => {
           </div>
 
           {post && (
-            <div className="flex flex-col lg:flex-row gap-10">
-              <div className="w-full lg:w-[50%]">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 transition-all duration-500 ease-in-out">
+              <div className="w-full">
                 <Image
-                  src={post?.image}
+                  src={post.image}
                   alt="Hero Banner"
                   width={5000}
                   height={250}
-                  className="w-full h-auto object-cover rounded-l-xl"
+                  className="w-full h-96 object-cover rounded-xl"
                 />
               </div>
 
-              <div className="flex flex-col py-4 justify-between lg:w-[50%]">
+              <div className="flex flex-col py-4 justify-between">
                 <div className="flex flex-col gap-y-4">
                   <div className="flex items-center gap-x-4">
                     <div className="px-5 py-1 rounded-full bg-[#7237D71A]">

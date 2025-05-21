@@ -23,7 +23,7 @@ const EachBlogPosts = () => {
           <Spinner />
         ) : (
           <div className="min-h-screen bg-grey100 overflow-y-auto">
-            <div className="w-full min-h-[50vh] bg-gradient-to-br from-[#F5F3FF] via-[#FFFFFF] to-[#EEF2FF] lg:px-10 px-4 py-10">
+            <div className="w-full h-[50vh] bg-gradient-to-br from-[#F5F3FF] via-[#FFFFFF] to-[#EEF2FF] lg:px-10 px-4 py-10">
               <div className="flex flex-col items-center gap-y-5 w-full sm:w-[80%] mx-auto xl:w-[50%] mt-20">
                 <div className="flex gap-x-7 items-center">
                   <div className="px-5 py-1 rounded-full bg-[#7237D71A]">

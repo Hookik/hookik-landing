@@ -16,9 +16,6 @@ const EachBlogPosts = () => {
     useGetSingleBlogPostsQuery(slug);
 
   useEffect(() => console.log({ blogPostData }), [blogPostData]);
-
-  const onDelete = () => {};
-
   return (
     <>
       <PageLayout footBanner={false}>

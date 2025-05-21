@@ -14,11 +14,21 @@ export const blogApi = createApi({
     }),
     getSingleBlogPosts: builder.query({
       query: (slug) => ({
-        url: `blog/${slug}`,
+        url: `blog/${slug}`
+      }),
+    }),
+    getCategories: builder.query({
+      query: () => ({
+        url: `blog/categories`,
+      }),
+    }),
+    getFeaturedPost: builder.query({
+      query: (params) => ({
+        url: `blogs/featured`,
         method: "GET",
+        params,
       }),
     }),
   }),
 });
-
-export const { useGetBlogsQuery, useGetSingleBlogPostsQuery } = blogApi;
+export const { useGetBlogsQuery, useGetSingleBlogPostsQuery, useGetCategoriesQuery, useGetFeaturedPostQuery } = blogApi;

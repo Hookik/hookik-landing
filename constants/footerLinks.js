@@ -1,3 +1,4 @@
+import { SHOP_URL } from "@/lib/contsants";
 import {
   FaFacebookF,
   FaTwitter,
@@ -10,18 +11,18 @@ export const usefulLinks = [
   {
     id: 1,
     value: "Shop",
-    route: "",
+    route: SHOP_URL,
   },
   {
     id: 2,
     value: "FAQ",
-    route: "",
+    route: "faq",
   },
-  {
-    id: 3,
-    value: "Order Options",
-    route: "",
-  },
+  // {
+  //   id: 3,
+  //   value: "Order Options",
+  //   route: "",
+  // },
   {
     id: 4,
     value: "How to Shop",
@@ -58,12 +59,12 @@ export const hookWithUs = [
   },
   {
     id: 2,
-    value: "Become a creator",
+    value: "Become a Vendor",
     route: "",
   },
   {
     id: 3,
-    value: "Become an Influencer",
+    value: "Become an Creator",
     route: "",
   },
 ];
@@ -79,11 +80,11 @@ export const legal = [
     value: "Privacy Policy",
     route: "",
   },
-  {
-    id: 3,
-    value: "Invite a Friend",
-    route: "",
-  },
+  // {
+  //   id: 3,
+  //   value: "Invite a Friend",
+  //   route: "",
+  // },
   //   {
   //     id: 4,
   //     value: "Do not sell or share personal info",
@@ -107,11 +108,11 @@ export const company = [
     value: "Career",
     route: "",
   },
-  {
-    id: 3,
-    value: "Press and news",
-    route: "",
-  },
+  // {
+  //   id: 3,
+  //   value: "Press and news",
+  //   route: "",
+  // },
   {
     id: 4,
     value: "Blogs",
@@ -133,7 +134,7 @@ export const needHelp = [
   {
     id: 3,
     value: "Contact Us",
-    route: "",
+    route: "contact",
   },
 ];
 

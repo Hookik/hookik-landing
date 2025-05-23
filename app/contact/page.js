@@ -17,25 +17,25 @@ const Contact = () => {
       id: 1,
       title: "Email",
       icon: <CiMail className="text-2xl" />,
-      detail: "hello@hookik.com",
+      detail: "support@hookik.com",
     },
     {
       id: 2,
       title: "Phone",
       icon: <CiPhone className="text-2xl" />,
-      detail: "+1 (555) 123-4567",
+      detail: "+2347087154839",
     },
     {
       id: 3,
       title: "Office",
       icon: <CiLocationOn className="text-2xl" />,
-      detail: "123 Creator Ave, Suite 500 San Francisco, CA 94103",
+      detail: "No 16 Oduduwa Way, GRA Ikeja, Lagos",
     },
     {
       id: 4,
       title: "Support Hours",
       icon: <CiChat1 className="text-2xl" />,
-      detail: "Monday - Friday: 9AM - 6PM PST Saturday: 10AM - 2PM PST",
+      detail: "Monday - Friday: 9AM - 5PM PST Saturday: 10AM - 2PM PST",
     },
   ];
 

@@ -8,6 +8,8 @@ import {
 } from "@/constants/howItWorks";
 import GradientBackground from "@/components/GradientBackground";
 import { IoChevronForward } from "react-icons/io5";
+import Link from "next/link";
+import { APP_URL } from "@/lib/contsants";
 
 const HowItWorksSection = () => {
   return (
@@ -24,10 +26,12 @@ const HowItWorksSection = () => {
 
         <div className="flex w-full flex-col gap-5 justify-between md:flex-row items-center">
           <p className="text-xl font-semibold text-[#8937CE]">For Creators</p>
-          <button className="px-8 py-3 border border-[#8937CE] text-[#8937CE] bg-white rounded-full flex justify-center items-center gap-x-2">
-            <p className="font-medium text-sm">Apply as Creator</p>
-            <IoChevronForward className="text-2xl" />
-          </button>
+          <Link href={`${APP_URL}creator/signup`}>
+            <button className="px-8 py-3 border border-[#8937CE] text-[#8937CE] bg-white rounded-full flex justify-center items-center gap-x-2 cursor-pointer">
+              <p className="font-medium text-sm">Apply as Creator</p>
+              <IoChevronForward className="text-2xl" />
+            </button>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -69,18 +73,22 @@ const HowItWorksSection = () => {
               Creators post on their own social channels, helping you reach new
               audiences and validate content organically.
             </p>
-            <button className="px-10 py-3 bg-[#8937CE] flex w-48 justify-center font-medium text-sm text-white rounded-full gap-x-2">
-              Get Started
-            </button>
+            <Link href={`${APP_URL}signup`}>
+              <button className="px-10 py-3 bg-[#8937CE] flex w-48 justify-center font-medium text-sm text-white rounded-full gap-x-2 cursor-pointer">
+                Get Started
+              </button>
+            </Link>
           </div>
         </div>
 
         <div className="flex w-full flex-col gap-5 mt-10 justify-between md:flex-row items-center">
           <p className="text-xl font-semibold text-[#8937CE]">For Brands</p>
-          <button className="px-8 py-3 border border-[#8937CE] text-[#8937CE] bg-white rounded-full flex justify-center items-center gap-x-2">
-            <p className="font-medium text-sm">Apply as Brand</p>
-            <IoChevronForward className="text-2xl" />
-          </button>
+          <Link href={`${APP_URL}client/signup`}>
+            <button className="px-8 py-3 border border-[#8937CE] text-[#8937CE] bg-white rounded-full flex justify-center items-center gap-x-2 cursor-pointer">
+              <p className="font-medium text-sm">Apply as Brand</p>
+              <IoChevronForward className="text-2xl" />
+            </button>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -122,9 +130,11 @@ const HowItWorksSection = () => {
               Describe what you need, launch a campaign, and sit back while the
               submissions roll in.
             </p>
-            <button className="px-10 py-3 bg-[#8937CE] flex w-48 justify-center font-medium text-sm text-white rounded-full gap-x-2">
-              Get Started
-            </button>
+            <Link href={`${APP_URL}client/signup`} passHref>
+              <button className="px-10 py-3 bg-[#8937CE] flex w-48 justify-center font-medium text-sm text-white rounded-full gap-x-2 cursor-pointer">
+                Get Started
+              </button>
+            </Link>
           </div>
         </div>
       </div>

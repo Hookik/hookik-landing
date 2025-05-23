@@ -18,11 +18,11 @@ export default function about() {
 
             <div className="w-full md:w-[80%] mx-auto">
               <Image
-                src={`/images/about.jpeg`}
+                src={`/images/about.png`}
                 alt="Hero Banner"
                 width={5000}
                 height={250}
-                className="w-full h-auto object-cover rounded-xl"
+                className="w-full h-[800px] object-cover rounded-xl"
               />
             </div>
 
@@ -74,11 +74,11 @@ export default function about() {
               </div>
             </div>
           </div>
-          <div className="flex justify-center mt-14">
+          {/* <div className="flex justify-center mt-14">
             <button className="px-10 py-3 w-64 justify-center items-center bg-[#8937CE] flex font-medium text-sm text-white rounded-full gap-x-2">
               Join Our Team
             </button>
-          </div>
+          </div> */}
         </GradientBackground>
       </PageLayout>
     </>

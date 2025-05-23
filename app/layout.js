@@ -18,8 +18,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Providers>
-        <body className={`${montserrat.variable} antialiased`}>{children}</body>
-        <Toaster position="top-right" richColors />
+        <body className={`${montserrat.variable} antialiased`}>
+          <Toaster position="top-right" richColors />
+          {children}
+          </body>
       </Providers>
     </html>
   );

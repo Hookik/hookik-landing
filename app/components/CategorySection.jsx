@@ -20,9 +20,10 @@ const CategorySection = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {userCategories?.map((item) => (
-            <div
+            <Link
+            href={item.url}
               key={item?.id}
-              className="w-full pb-4 rounded-xl border border-[#E2E8F0]"
+              className="w-full pb-4 group rounded-xl border border-[#E2E8F0] overflow-hidden hover:shadow-md transition-shadow duration-300 bg-white"
             >
               <div className="w-full flex justify-center items-center">
                 <Image
@@ -30,7 +31,7 @@ const CategorySection = () => {
                   alt="Hero Banner"
                   width={5000}
                   height={250}
-                  className="w-full h-auto object-cover rounded-t-xl"
+                  className="object-cover rounded-t-xl transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="p-4 rounded-full absolute bg-[#8937CE]">
                   {item?.icon}
@@ -43,16 +44,14 @@ const CategorySection = () => {
                 <p className="text-[#4B5563] text-sm leading-6">
                   {item?.description}
                 </p>
-                <Link href={""}>
-                  <div className="flex gap-x-3 items-center text-[#8937CE]">
-                    <p className="underline text-xs underline-offset-6 font-medium">
-                      Learn More
-                    </p>
-                    <IoChevronForward className="text-lg" />
-                  </div>
-                </Link>
+                <div className="flex gap-x-3 items-center text-[#8937CE]">
+                  <p className="underline text-xs underline-offset-6 font-medium">
+                    Learn More
+                  </p>
+                  <IoChevronForward className="text-lg" />
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

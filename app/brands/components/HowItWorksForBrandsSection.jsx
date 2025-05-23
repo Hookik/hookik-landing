@@ -1,24 +1,26 @@
 import Image from "next/image";
 import React from "react";
-import { howItWorksForCreators } from "@/constants/forCreators";
 import GradientBackground from "@/components/GradientBackground";
+import { howItWorksForBrands } from "@/constants/forBrands";
+import Link from "next/link";
+import { APP_URL } from "@/lib/contsants";
 
-const HowItWorksForCreatorsSection = () => {
+const HowItWorksForBrandsSection = () => {
   return (
     <>
       <GradientBackground>
         <div className="flex flex-col gap-y-10 my-16 container mx-auto max-w-[1400px] px-4 items-center">
           <div className="flex flex-col gap-y-4">
             <h2 className="font-bold text-3xl text-[#00002E] text-center">
-              How It Works For Creators
+              How It Works For Brands
             </h2>
             <p className="text-[#4B5563] text-center">
-              Getting started is simple - follow these steps
+              Get started with creator marketing in four simple steps
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {howItWorksForCreators.map((item) => (
+            {howItWorksForBrands.map((item) => (
               <div
                 key={item?.id}
                 className="w-full p-4 flex flex-col gap-y-6 flex-1 rounded-xl border border-[#E2E8F0] bg-white shadow-lg"
@@ -35,7 +37,7 @@ const HowItWorksForCreatorsSection = () => {
                 <div className="w-full h-48 rounded-xl">
                   <Image
                     src={`/images/${item?.image}.jpeg`}
-                    alt="Hero Banner"
+                    alt={item?.image}
                     width={5000}
                     height={250}
                     className="w-full h-full object-cover rounded-xl"
@@ -45,13 +47,15 @@ const HowItWorksForCreatorsSection = () => {
             ))}
           </div>
 
-          <button className="px-10 py-3 w-64 justify-center items-center bg-[#8937CE] flex font-medium text-sm text-white rounded-full gap-x-2">
-            Apply as Creator
-          </button>
+          <Link href={`${APP_URL}client/signup`} passHref>
+            <button className="px-10 py-3 w-64 justify-center items-center bg-[#8937CE] flex font-medium text-sm text-white rounded-full gap-x-2 cursor-pointer">
+              Apply as Brand
+            </button>
+          </Link>
         </div>
       </GradientBackground>
     </>
   );
 };
 
-export default HowItWorksForCreatorsSection;
+export default HowItWorksForBrandsSection;

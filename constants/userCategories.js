@@ -7,6 +7,7 @@ export const userCategories = [
     id: 1,
     name: "For Creators",
     icon: <LuUsers className="text-2xl text-white" />,
+    url: "creators",
     description:
       "Find brand partnerships, monetize your influence, and grow your audience with authentic content.",
     route: "",
@@ -15,6 +16,7 @@ export const userCategories = [
   {
     id: 2,
     name: "For Brands",
+    url: "brands",
     icon: <FaRegChartBar className="text-2xl text-white" />,
     description:
       "Connect with creators who authentically love your products and reach their engaged audiences.",
@@ -24,6 +26,7 @@ export const userCategories = [
   {
     id: 3,
     name: "For Shoppers",
+    url: "shoppers",
     icon: <FiShoppingBag className="text-2xl text-white" />,
     description:
       "Discover and shop products recommended by creators you trust, all in one place.",

@@ -13,7 +13,7 @@ const PageLayout = ({ children, title, description, btnLabel, route, footBanner 
           title={title}
           description={description}
           btnLabel={btnLabel}
-          route={route}
+          route={route ?? ""}
         />
       )}
       <Footer />

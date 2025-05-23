@@ -1,7 +1,8 @@
+import { API_URL } from "@/lib/contsants";
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const baseQuery = fetchBaseQuery({
-  baseUrl: "https://api.staging.hookik.com/api/v2/",
+  baseUrl: API_URL,
   prepareHeaders: (headers) => {
     headers.set("Content-Type", "application/json");
     // You can add other headers here, e.g., Authorization if needed

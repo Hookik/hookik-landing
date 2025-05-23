@@ -1,18 +1,29 @@
-import Spinner from "@/app/components/Spinner";
-import { latestArticles } from "@/constants/latestArticles";
-import { userCategories } from "@/constants/userCategories";
-import { convertDate } from "@/helper";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
-import { FaRegCalendar } from "react-icons/fa";
 import { IoChevronForward } from "react-icons/io5";
+import Link from "next/link";
+import { FaRegCalendar } from "react-icons/fa";
+import { convertDate } from "@/helper";
 
-const LatestArticles = ({ posts }) => {
+const LatestBlogsSection = ({ posts }) => {
   return (
     <>
-      <div className="flex flex-col gap-y-5 my-16 container mx-auto max-w-[1400px] px-4">
-        <p className="text-2xl font-bold">Latest Articles</p>
+      <div className="flex flex-col gap-y-10 max-w-[1400px] mx-auto my-16 px-4">
+        <div className="flex w-full flex-col gap-5 justify-between md:flex-row items-center">
+          <div>
+            <h2 className="text-xl font-semibold">
+              Latest from Our Blog
+            </h2>
+            <p className="font-medium opacity-60 leading-7">Insights and resources for creators and brands</p>
+          </div>
+          <Link href={"/blog"}>
+            <button className="px-8 py-3 border border-[#8937CE] text-[#8937CE] bg-white rounded-full flex justify-center items-center gap-x-2 cursor-pointer">
+              <p className="font-medium text-sm">View All Articles</p>
+              <IoChevronForward className="text-2xl" />
+            </button>
+          </Link>
+        </div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {posts?.map((item) => (
             <div
@@ -64,14 +75,9 @@ const LatestArticles = ({ posts }) => {
             </div>
           ))}
         </div>
-        {/* <div className="w-full flex mt-10 justify-center">
-          <button className="px-10 py-3 w-56 justify-center items-center border border-[#8937CE] flex font-medium text-sm text-[#8937CE] rounded-full">
-            Learn More Articles
-          </button>
-        </div> */}
       </div>
     </>
   );
 };
 
-export default LatestArticles;
+export default LatestBlogsSection;

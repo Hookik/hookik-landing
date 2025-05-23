@@ -30,7 +30,7 @@ const BrandSuccessStories = () => {
                   alt="Hero Banner"
                   width={5000}
                   height={250}
-                  className="w-full h-auto object-cover rounded-t-xl"
+                  className="w-full h-auto object-cover"
                 />
               </div>
               <div className="flex flex-col gap-y-4 mt-3 px-4">

@@ -29,13 +29,13 @@ const Footer = () => {
             <h3 className="font-semibold uppercase text-sm">Useful Links</h3>
             <div className="flex-col flex gap-y-4">
               {usefulLinks?.map((item, index) => (
-                <a
+                <Link
                   key={index}
-                  href=""
+                  href={item.route}
                   className="text-xs font-medium opacity-75"
                 >
                   {item?.value}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -44,13 +44,13 @@ const Footer = () => {
             <h3 className="font-semibold uppercase text-sm">Hook with us</h3>
             <div className="flex-col flex gap-y-4">
               {hookWithUs?.map((item, index) => (
-                <a
+                <Link
                   key={index}
-                  href=""
+                  href={item.route}
                   className="text-xs font-medium opacity-75"
                 >
                   {item?.value}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -59,13 +59,13 @@ const Footer = () => {
             <h3 className="font-semibold uppercase text-sm">Legal</h3>
             <div className="flex-col flex gap-y-4">
               {legal?.map((item, index) => (
-                <a
+                <Link
                   key={index}
-                  href=""
+                  href={item.route}
                   className="text-xs font-medium opacity-75"
                 >
                   {item?.value}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -74,13 +74,13 @@ const Footer = () => {
             <h3 className="font-semibold uppercase text-sm">Company</h3>
             <div className="flex-col flex gap-y-4">
               {company?.map((item, index) => (
-                <a
+                <Link
                   key={index}
-                  href=""
+                  href={item.route}
                   className="text-xs font-medium opacity-75"
                 >
                   {item?.value}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -89,13 +89,13 @@ const Footer = () => {
             <h3 className="font-semibold uppercase text-sm">Need Help</h3>
             <div className="flex-col flex gap-y-4">
               {needHelp?.map((item, index) => (
-                <a
+                <Link
                   key={index}
-                  href=""
+                  href={item.route}
                   className="text-xs font-medium opacity-75"
                 >
                   {item?.value}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

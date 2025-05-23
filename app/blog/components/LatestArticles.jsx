@@ -17,7 +17,7 @@ const LatestArticles = ({ posts }) => {
           {posts?.map((item) => (
             <div
               key={item?.id}
-              className="w-full pb-4 rounded-xl border border-[#E2E8F0]"
+              className="w-full pb-4 group rounded-xl border border-[#E2E8F0] overflow-hidden hover:shadow-md transition-shadow duration-300 cursor-pointer"
             >
               <div className="w-full h-36 flex justify-center items-center">
                 <Image
@@ -25,7 +25,7 @@ const LatestArticles = ({ posts }) => {
                   alt="Hero Banner"
                   width={5000}
                   height={250}
-                  className="w-full h-full object-cover rounded-t-xl"
+                  className="w-full h-full object-cover rounded-t-xl transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
               <div className="flex flex-col gap-y-4 mt-5 px-4">

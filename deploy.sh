@@ -3,6 +3,12 @@ set -e
 
 echo "Deploying Next application ..."
 
+# Use version Node 18.18.0
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+nvm use 18.18.0
+
 # Enter maintenance mode
     # Update codebase
     git fetch origin main

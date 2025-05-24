@@ -31,7 +31,7 @@ const Footer = () => {
               {usefulLinks?.map((item, index) => (
                 <Link
                   key={index}
-                  href={item.route}
+                  href={item?.route}
                   className="text-xs font-medium opacity-75"
                 >
                   {item?.value}
@@ -46,7 +46,7 @@ const Footer = () => {
               {hookWithUs?.map((item, index) => (
                 <Link
                   key={index}
-                  href={item.route}
+                  href={item?.route}
                   className="text-xs font-medium opacity-75"
                 >
                   {item?.value}
@@ -61,7 +61,7 @@ const Footer = () => {
               {legal?.map((item, index) => (
                 <Link
                   key={index}
-                  href={item.route}
+                  href={item?.route}
                   className="text-xs font-medium opacity-75"
                 >
                   {item?.value}
@@ -76,7 +76,7 @@ const Footer = () => {
               {company?.map((item, index) => (
                 <Link
                   key={index}
-                  href={item.route}
+                  href={item?.route}
                   className="text-xs font-medium opacity-75"
                 >
                   {item?.value}
@@ -91,7 +91,7 @@ const Footer = () => {
               {needHelp?.map((item, index) => (
                 <Link
                   key={index}
-                  href={item.route}
+                  href={item?.route}
                   className="text-xs font-medium opacity-75"
                 >
                   {item?.value}
@@ -105,7 +105,7 @@ const Footer = () => {
           <div className="flex justify-end gap-x-4 pb-4 items-center border-b border-[#D9DBE9] container mx-auto max-w-[1400px] px-4">
             {socials.map((item) => (
               <a
-                href={item.route}
+                href={item?.route}
                 key={item.id}
                 target="_blank"
                 rel="noopener noreferrer"

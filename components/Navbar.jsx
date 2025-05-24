@@ -69,14 +69,14 @@ const Navbar = () => {
           </button>
         </div>
       </nav>
-      {showMenu && <MobileNavbar />}
+      {showMenu && <MobileNavbar pathname={pathname} />}
     </>
   );
 };
 
 export default Navbar;
 
-const MobileNavbar = () => {
+const MobileNavbar = ({ pathname }) => {
   return (
     <>
       <div className="flex flex-col px-4 py-10 text-sm xl:hidden w-full gap-y-6 z-50 bg-white">

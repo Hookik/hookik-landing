@@ -78,7 +78,7 @@ const Contact = () => {
           <div className="flex flex-col items-center gap-y-5">
             <h1 className="font-bold text-center text-4xl">Contact</h1>
             <p className="text-center opacity-60">
-              Have questions or need assistance? We&apos;re here to help!
+              Have questions or need assistance? We&apos;re here to help!!
             </p>
           </div>
 

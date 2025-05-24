@@ -1,7 +1,7 @@
 "use client";
 
 import GradientBackground from "@/components/GradientBackground";
-import Input from "@/components/input";
+import Input from "@/components/Input";
 import MultiLineInput from "@/components/MultiLineInput";
 import { handleSuccess, handleError } from "@/helper";
 import { useContactUsMutation } from "@/services/contact.api";

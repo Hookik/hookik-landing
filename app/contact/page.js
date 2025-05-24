@@ -78,7 +78,7 @@ const Contact = () => {
           <div className="flex flex-col items-center gap-y-5">
             <h1 className="font-bold text-center text-4xl">Contact</h1>
             <p className="text-center opacity-60">
-              Have questions or need assistance? We're here to help!
+              Have questions or need assistance? We&apos;re here to help!
             </p>
           </div>
 
@@ -88,7 +88,7 @@ const Contact = () => {
               <div className="flex flex-col gap-y-4">
                 <h2 className="text-2xl font-semibold">Get In Touch</h2>
                 <p className="text-sm">
-                  We'd love to hear from you. Please fill out the form or
+                  We&apos;d love to hear from you. Please fill out the form or
                   contact us using the information below.
                 </p>
               </div>

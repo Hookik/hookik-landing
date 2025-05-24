@@ -4,6 +4,7 @@ import PageLayout from "@/template/PageLayout";
 import { FaRegCalendar } from "react-icons/fa";
 import { convertDate } from "@/helper";
 import { API_URL } from "@/lib/contsants";
+import Image from "next/image";
 
 export async function generateMetadata({ params }) {
   const res = await fetch(`${API_URL}/blog/${params.slug}`, {
@@ -61,8 +62,10 @@ export default async function EachBlogPosts({ params }) {
               {post?.title}
             </h1>
 
-            <img
+            <Image
               src={post?.image}
+              width={5000}
+              height={500}
               alt="Hero Banner"
               className="w-full h-auto object-cover mb-10 rounded-xl"
             />

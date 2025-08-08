@@ -73,12 +73,12 @@ export const legal = [
   {
     id: 1,
     value: "Terms of Service",
-    route: "",
+    route: "https://app.hookik.com/terms-and-privacy.pdf",
   },
   {
     id: 2,
     value: "Privacy Policy",
-    route: "",
+    route: "https://app.hookik.com/terms-and-privacy.pdf",
   },
   // {
   //   id: 3,

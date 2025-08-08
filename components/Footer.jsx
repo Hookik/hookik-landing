@@ -58,15 +58,28 @@ const Footer = () => {
           <div className="flex flex-col gap-y-6">
             <h3 className="font-semibold uppercase text-sm">Legal</h3>
             <div className="flex-col flex gap-y-4">
-              {legal?.map((item, index) => (
-                <Link
-                  key={index}
-                  href={item?.route}
-                  className="text-xs font-medium opacity-75"
-                >
-                  {item?.value}
-                </Link>
-              ))}
+              {legal?.map((item, index) => {
+                const isExternal = item?.route?.startsWith("http");
+                return isExternal ? (
+                  <a
+                    key={index}
+                    href={item?.route}
+                    className="text-xs font-medium opacity-75"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {item?.value}
+                  </a>
+                ) : (
+                  <Link
+                    key={index}
+                    href={item?.route}
+                    className="text-xs font-medium opacity-75"
+                  >
+                    {item?.value}
+                  </Link>
+                );
+              })}
             </div>
           </div>
 

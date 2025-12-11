@@ -12,7 +12,7 @@ import { getLatestPosts } from "@/lib/api";
 import { APP_URL } from "@/lib/contsants";
 
 export const metadata = {
-  title: "Hookik – The Future of Creator Marketing",
+  title: "Hookik – The Future of Creator Marketing!!",
   description:
     "Discover Hookik: Where creators, brands, and shoppers connect through authentic recommendations. Grow your brand, monetize your influence, or shop smarter.",
   keywords: [
